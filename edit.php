@@ -1,7 +1,7 @@
 <?php 
     $nik = $_GET['nik'];
-    $database = new PDO("mysql:host=localhost;dbname=laatihan", 'root', '');
-    $query = $database->query("SELECT * FROM siswa WHERE nik=$nik");
+    $database = new PDO("mysql:host=localhost;dbname=pduli_diri", 'root', '');
+    $query = $database->query("SELECT * FROM akun WHERE nik=$nik");
     $data = $query->fetch();
     ?>
 <!DOCTYPE html>
@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="container-sm">
-    <form action="proses_edit.php" method="post">
+    <form action="proses_edit.php?nik=<?= $nik ?>" method="post">
         <input type="hidden" name="nik" value="<?= $nik ?>">
         <div>
             <label>nik</label>

@@ -1,9 +1,9 @@
 <?php
-	$user  = 'root';
-	$pass = '';
+	$nik  = 'root';
+	$nama_lengkap = '';
 	try {
 		// buat koneksi dengan database
-		$koneksi = new PDO('mysql:host=localhost;dbname=pduli_diri;',$user,$pass);
+		$koneksi = new PDO('mysql:host=localhost;dbname=pduli_diri;',$nik,$nama_lengkap);
 		// set error mode
 		$koneksi->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 	}catch (PDOException $e) {

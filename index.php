@@ -14,7 +14,7 @@
         <?php
         
         $db = new PDO("mysql:host=localhost;dbname=pduli_diri",'root', '');
-        $query = $db->query("SELECT * FROM login");
+        $query = $db->query("SELECT * FROM akun");
         ?>
     
 
@@ -33,8 +33,8 @@
                 <td><?= $data['nama_lengkap'] ?></td>
 
                 <td>
-                    <a href="edit.php?nis=<?= $data['nik'] ?>"class="btn btn-info">Update</a>
-                    <a href="proses_hapus.php?nis=<?= $data['nik'] ?>"class="btn btn-info">Hapus</a>
+                    <a href="edit.php?nik=<?= $data['nik'] ?>"class="btn btn-info">Update</a>
+                    <a href="proses_hapus.php?nik=<?= $data['nik'] ?>"class="btn btn-info">Hapus</a>
                 </td>
             </tr>
         <?php endwhile ?>
