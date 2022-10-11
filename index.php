@@ -14,12 +14,13 @@
         <?php
         
         $db = new PDO("mysql:host=localhost;dbname=pduli_diri",'root', '');
-        $query = $db->query("SELECT * FROM akun");
+        $query = $db->query("SELECT * FROM login");
         ?>
     
 
     <div class="container-sm">
-        <a href="tambah.php">Tambah</a>
+        <a href="tambah.php "class="btn btn-info">Register</a>
+        <a href="login.php "class="btn btn-info">Logout</a>
         <table border="1" cellpadding="10" cellspacing="0" class="table table-bordered border-info">
             <tr>
                 <th>nik</th>
@@ -29,12 +30,12 @@
 
         <?php while($data = $query->fetch()): ?>
             <tr>
-                <td><?= $data['nik'] ?></td>
+                <td><?= $data['user'] ?></td>
                 <td><?= $data['nama_lengkap'] ?></td>
 
                 <td>
-                    <a href="edit.php?nik=<?= $data['nik'] ?>"class="btn btn-info">Update</a>
-                    <a href="proses_hapus.php?nik=<?= $data['nik'] ?>"class="btn btn-info">Hapus</a>
+                    <a href="edit.php?nik=<?= $data['user'] ?>"class="btn btn-info">Update</a>
+                    <a href="proses_hapus.php?nik=<?= $data['user'] ?>"class="btn btn-info">Hapus</a>
                 </td>
             </tr>
         <?php endwhile ?>

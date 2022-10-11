@@ -1,8 +1,5 @@
 <?php
 
- include('koneksi.php');
-
-
     $nik = $_POST['nik'];
     $nama_lengkap = $_POST['nama_lengkap'];
 
